@@ -1,0 +1,266 @@
+/* GraphShield AI: Premium Dark Banking Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* Global App Styling */
+.stApp {
+    background-color: #060913 !important;
+    color: #F8FAFC !important;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Block container padding overrides */
+.block-container {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+    background-color: #02120e !important; /* Extremely dark forest green */
+    border-right: 1px solid #1E293B !important;
+}
+section[data-testid="stSidebar"] * {
+    color: #E2E8F0 !important;
+}
+section[data-testid="stSidebar"] h1, 
+section[data-testid="stSidebar"] h2, 
+section[data-testid="stSidebar"] h3 {
+    color: #10B981 !important; /* Emerald green header */
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Standard Typography */
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em !important;
+}
+h4, h5, h6 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    color: #F1F5F9 !important;
+}
+
+/* Accent Gradients */
+.gradient-text {
+    background: linear-gradient(90deg, #10B981 0%, #00E5FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Streamlit Native Card Overrides (st.container with border) */
+div[data-testid="stVerticalBlockBorder"] {
+    background-color: #0F172A !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    margin-bottom: 1.25rem !important;
+}
+
+/* Custom HTML KPI Cards styling */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+.kpi-card {
+    background: linear-gradient(135deg, #0F172A 0%, #0A0F1E 100%);
+    border: 1px solid #1E293B;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: #00E5FF;
+    box-shadow: 0 8px 30px rgba(0, 229, 255, 0.15);
+}
+.kpi-title {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 4px;
+}
+.kpi-delta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.delta-positive { color: #10B981; }
+.delta-negative { color: #EF4444; }
+.delta-neutral { color: #94A3B8; }
+
+/* Custom Badge styling */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.badge-danger {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #F87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+.badge-warning {
+    background-color: rgba(245, 158, 11, 0.15) !important;
+    color: #FBBF24 !important;
+    border: 1px solid rgba(245, 158, 11, 0.3) !important;
+}
+.badge-success {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: #34D399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+.badge-info {
+    background-color: rgba(6, 182, 212, 0.15) !important;
+    color: #22D3EE !important;
+    border: 1px solid rgba(6, 182, 212, 0.3) !important;
+}
+
+/* Custom Alert Banner */
+.alert-banner {
+    background-color: rgba(15, 23, 42, 0.6);
+    border-left: 4px solid #00E5FF;
+    border-top: 1px solid #1E293B;
+    border-right: 1px solid #1E293B;
+    border-bottom: 1px solid #1E293B;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+.alert-banner-danger { border-left-color: #EF4444; }
+.alert-banner-warning { border-left-color: #F59E11; }
+.alert-banner-success { border-left-color: #10B981; }
+.alert-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #FFFFFF;
+}
+.alert-body {
+    font-size: 0.85rem;
+    color: #CBD5E1;
+    line-height: 1.4;
+}
+
+/* Monospace ID styling */
+.mono-id {
+    font-family: 'Fira Code', 'Courier New', monospace !important;
+    font-weight: 600;
+    color: #00E5FF;
+    background-color: rgba(0, 229, 255, 0.08);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+}
+.mono-id-danger {
+    color: #FF1744;
+    background-color: rgba(255, 23, 68, 0.08);
+    border: 1px solid rgba(255, 23, 68, 0.2);
+}
+
+/* Metric styling fallback */
+div[data-testid="stMetricValue"] {
+    color: #FFFFFF !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+}
+div[data-testid="stMetricLabel"] {
+    color: #94A3B8 !important;
+    font-family: 'Inter', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+div[data-testid="stMetric"] {
+    background-color: #0F172A !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 12px !important;
+    padding: 1.25rem !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Button UI styling */
+div.stButton > button {
+    background: linear-gradient(135deg, #005F43 0%, #00422E 100%) !important;
+    color: #FFFFFF !important;
+    border: 1px solid #00805B !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1.2rem !important;
+    font-family: 'Inter', sans-serif !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100%;
+}
+div.stButton > button:hover {
+    background: linear-gradient(135deg, #007D59 0%, #005F43 100%) !important;
+    border-color: #00E5FF !important;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Form Submit Buttons */
+div[data-testid="stForm"] div.stButton > button {
+    width: auto !important;
+    display: inline-block !important;
+}
+
+/* Input Fields and Selectors Styling */
+.stTextInput input, .stNumberInput input, .stSelectbox select {
+    background-color: #060913 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 6px !important;
+}
+.stTextInput input:focus, .stNumberInput input:focus {
+    border-color: #00E5FF !important;
+    box-shadow: 0 0 0 1px #00E5FF !important;
+}
+
+/* Tables and Dataframes */
+div[data-testid="stTable"] table {
+    background-color: #0F172A !important;
+    border: 1px solid #1E293B !important;
+    border-collapse: collapse !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+div[data-testid="stTable"] th {
+    background-color: #00422E !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 2px solid #1E293B !important;
+}
+div[data-testid="stTable"] td {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #1E293B !important;
+    color: #E2E8F0 !important;
+}
+
+/* Tooltips */
+div[data-testid="stTooltipIcon"] {
+    color: #00E5FF !important;
+}
